@@ -11,11 +11,9 @@ public class Main {
         original = num;
 
         // Count the number of digits
-        int temp = num;
-        while (temp > 0) {
-            count++;
-            temp /= 10;
-        }
+        int temp;
+        for (temp = num; temp > 0; count++, temp /= 10)
+            ;
 
         // Calculate the sum of each digit raised to the power of count
         temp = num;
