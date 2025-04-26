@@ -2,7 +2,7 @@
 class Main {
     public static void main(String[] args) {
         // Sorting an array of strings in alphabetical order
-        String[] a = { "dhoni", "virat", "rohit", "DK", "gill", "sachin", "yuvraj", "hardik", "bhuvi", "ashwin" };
+        String[] a = { "dhoni", "virat", "rohit", "DK", "gill", "sachin" };
 
         // Sorting the array using a simple bubble sort algorithm
         for (int i = 0; i < a.length; i++) {

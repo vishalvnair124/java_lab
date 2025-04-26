@@ -6,10 +6,12 @@ class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a line : ");
         String line = sc.nextLine();
         int vowels = 0, consonants = 0;
 
         // Convert the string to lowercase
+
         line = line.toLowerCase();
 
         for (int i = 0; i < line.length(); ++i) {

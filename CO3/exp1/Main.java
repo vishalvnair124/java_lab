@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 // Main class to 
 public class Main {
@@ -10,22 +11,31 @@ public class Main {
             throw new InvalidPasswordException("Password must be at least 8 characters long.");
         }
         // Check if at least one numeric character.
-        if (!password.matches(".*\\d.*")) {
+        else if (!password.matches(".*\\d.*")) {
             throw new InvalidPasswordException("Password must contain at least one number.");
         }
         // Check if at least one special character ($, #, &)
-        if (!password.matches(".*[#$&].*")) {
+        else if (!password.matches(".*[#$&].*")) {
             throw new InvalidPasswordException("Password must contain at least one special character ($, #, &).");
+        } else {
+            System.out.print("Password ok");
         }
+
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         try {
             // Attempt to validate a sample password
-            validatePassword("Pass#12");
+
+            System.out.print("Enter a passwword : ");
+            String password = sc.nextLine();
+            validatePassword(password);
         } catch (InvalidPasswordException e) {
             // Handle the exception and print the error message
             System.out.println("Error: " + e.getMessage());
+        } finally {
+            sc.close();
         }
     }
 }
